@@ -20,7 +20,7 @@ deploy:
   # so for the bucket_name we write the name of app
   on :
     branch : master
-  access_key_id : "AKIASYZZ7RF4KHENCJ7T"
+  access_key_id : $AWS_ACCESS_KEY
   secret_access_key :
-    secure : "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"
+    secure : "$AWS_SECRET_KEY"
     
