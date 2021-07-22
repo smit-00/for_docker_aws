@@ -7,3 +7,19 @@ before_install:
 
 script:
   - docker run -e CI=true image_tag npm run test  
+
+deploy:
+  provider: elasticbeanstack
+  region: "us-east-1"
+  app: "docker-react"
+  envname: "Dockerreact-env"
+  bucket_name : "elasticbeanstalk-us-east-1-190710778232"
+  bucket_path : "docker-react"
+  #for bucket_path we specify folder of our app in s3 bucker 
+  # but when we first create the folder will not be there and it is created automatically after first deploy
+  # so for the bucket_name we write the name of app
+  on :
+    branch : master
+  access_key_id : $AWS_ACCESS_KEY
+  secret_access_key :
+    secure : "$AWS_SECRET_KEY"

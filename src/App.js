@@ -6,13 +6,17 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>"This one line here is the sole of this app huh ;-) m n m x"</p>
-        <p>"Line 2 xoxo</p>
-        <br />
-        <h5>
-          Dockerfile ka working directory WORKDIR jo hoga wo docker-compose.yml
-          me use hoga volumes mention karne ke lie
-        </h5>
+        <p>This is a react app created by smit using</p>
+        <ul>
+          <li>create react app</li>
+          <li>docker</li>
+          <li>travis CI</li>
+          <li>aws ebs</li>
+          <li>further will be added ig</li>
+        </ul>
+        <br/>
+        <a href="https://wa.me/+919167538106?text=Hii%20Smit">Dont Click Here</a>
+        
       </header>
     </div>
   );
