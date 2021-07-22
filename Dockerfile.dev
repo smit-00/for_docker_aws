@@ -1,0 +1,11 @@
+FROM node:alpine as builder
+
+#Dockerfile ka working directory WORKDIR jo hoga wo docker-compose.yml me use hoga volumes mention karne ke lie
+WORKDIR /app
+
+COPY package.json .
+RUN npm install
+
+COPY . .
+
+CMD ["npm","run","start"]

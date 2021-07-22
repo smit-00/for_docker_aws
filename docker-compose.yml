@@ -1,0 +1,20 @@
+version: "3"
+# volume wrt Dockerfile me jo WORKDIR hai us se hoga
+services:
+  r_web_app:
+    build:
+      context: .
+      # dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - /app/node_modules
+      - .:/app
+#ye volumes kam nahi kar raha ie browser me update nahi hota jab files me changes karte hai tab
+  tests:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /app/node_modules
+      - .:/app
