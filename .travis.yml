@@ -6,4 +6,4 @@ before_install:
   - docker build -t image_tag -f Dockerfile.dev .
 
 script:
-  - docker run image_tag npm run test -- --coverage  
+  - docker run -e CI=true image_tag npm run test  
