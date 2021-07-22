@@ -3,9 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker-build -t IMAGE -f Dockerfile.dev .
+  - docker build -t IMAGE/latest -f Dockerfile.dev .
 
 script:
-  - docker run IMAGE npm run test -- --coverage  
-
-# hmm
+  - docker run IMAGE/latest npm run test -- --coverage  
