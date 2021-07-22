@@ -7,3 +7,4 @@ before_install:
 
 script:
   - docker run IMAGE npm run test -- --coverage  
+  
