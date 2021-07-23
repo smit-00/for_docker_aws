@@ -10,11 +10,11 @@ script:
 
 deploy:
   provider: elasticbeanstack
-  region: "us-east-1"
-  app: "docker-react"
-  envname: "Dockerreact-env"
-  bucket_name : "elasticbeanstalk-us-east-1-190710778232"
-  bucket_path : "docker-react"
+  region: "ap-south-1"
+  app: "for-docker"
+  envname: "Fordocker-env"
+  bucket_name : "elasticbeanstalk-ap-south-1-190710778232"
+  bucket_path : "for-docker"
   #for bucket_path we specify folder of our app in s3 bucker 
   # but when we first create the folder will not be there and it is created automatically after first deploy
   # so for the bucket_name we write the name of app
